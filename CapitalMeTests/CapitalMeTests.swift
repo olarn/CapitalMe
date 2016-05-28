@@ -28,4 +28,14 @@ class CapitalMeTests: XCTestCase {
         
         XCTAssertTrue(json[0]["name"] == "Thailand")
     }
+    
+    func testJSONToCapitalInfoCaseNotFound() {
+        let bundle = NSBundle.mainBundle()
+        let url = bundle.URLForResource("notfound", withExtension: "json")
+        let data = NSData(contentsOfURL: url!)
+        let json = JSON(data: data!)
+        
+        XCTAssertTrue(json["status"] == 404)
+        XCTAssertTrue(json["message"] == "Not Found")
+    }
 }

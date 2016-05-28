@@ -7,35 +7,38 @@
 //
 
 import Foundation
-import Alamofire
 import SwiftyJSON
 
 class CapitalRequestController {
+    
+    private var client: RestClient!
+    
+    init(client: RestClient) {
+        self.client = client
+    }
     
     func request(
         capitalName: String,
         onFail:(error: NSError) -> Void,
         onSuccess:(info: CapitalInfo?) -> Void)
     {
-        Alamofire.request(.GET, "https://server/capital/\(capitalName)")
-            .validate()
-            .responseJSON { (response) in
-                print(response.result.value)
-                switch response.result {
-                case .Success:
-                    if let value = response.result.value {
-                        let json = JSON(value)
-                        let info = CapitalInfo()
-                        info.countryCode = json[0]["alpha2Code"].stringValue
-                        info.countryName = json[0]["name"].stringValue
-                        info.population = json[0]["population"].stringValue
-                        info.latLong = "\(json[0]["latlng"][0].stringValue),\(json[0]["latlng"][1].stringValue)"
-                        onSuccess(info: info)
-                    } else {
-                        onSuccess(info: nil)
-                    }
-                case .Failure(let error):
-                    onFail(error: error)
+        client.request(
+            "https://server/capital/\(capitalName)",
+            onFail: { (error) in
+                onFail(error: error)
+            }) { (data) in
+                if data == nil {
+                    onSuccess(info: nil)
+                } else {
+                    let json = JSON(data: data!)
+                    let info = CapitalInfo()
+                    info.countryCode = json[0]["alpha2Code"].stringValue
+                    info.countryName = json[0]["name"].stringValue
+                    info.population = json[0]["population"].stringValue
+                    let lat = json[0]["latlng"][0].stringValue
+                    let lon = json[0]["latlng"][1].stringValue
+                    info.latLong = "\(lat), \(lon)"
+                    onSuccess(info: info)
                 }
         }
     }

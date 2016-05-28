@@ -22,6 +22,8 @@
 		37A3DE7D1CF940C400A58583 /* notfound.json in Resources */ = {isa = PBXBuildFile; fileRef = 37A3DE771CF940C400A58583 /* notfound.json */; };
 		37A3DE801CF9417800A58583 /* CapitalInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A3DE7E1CF9417800A58583 /* CapitalInfo.swift */; };
 		37A3DE811CF9417800A58583 /* CapitalRequestController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A3DE7F1CF9417800A58583 /* CapitalRequestController.swift */; };
+		37A3DE831CF98D6D00A58583 /* RestClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A3DE821CF98D6D00A58583 /* RestClient.swift */; };
+		37A3DE851CF99DE200A58583 /* CapitalRequestControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A3DE841CF99DE200A58583 /* CapitalRequestControllerTest.swift */; };
 		60F4283E7A839D546375C9EB /* Pods_CapitalMeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42A940FBCCD91101F62AFAEA /* Pods_CapitalMeTests.framework */; };
 		7D2C8A1E471AEEBA68649A0C /* Pods_CapitalMeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7486D42C27DF27D47B586A1B /* Pods_CapitalMeUITests.framework */; };
 		DB109ACB3096848904B250D1 /* Pods_CapitalMe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57ED191F1CF69D6DF346D573 /* Pods_CapitalMe.framework */; };
@@ -63,6 +65,8 @@
 		37A3DE771CF940C400A58583 /* notfound.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = notfound.json; sourceTree = "<group>"; };
 		37A3DE7E1CF9417800A58583 /* CapitalInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CapitalInfo.swift; sourceTree = "<group>"; };
 		37A3DE7F1CF9417800A58583 /* CapitalRequestController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CapitalRequestController.swift; sourceTree = "<group>"; };
+		37A3DE821CF98D6D00A58583 /* RestClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestClient.swift; sourceTree = "<group>"; };
+		37A3DE841CF99DE200A58583 /* CapitalRequestControllerTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CapitalRequestControllerTest.swift; sourceTree = "<group>"; };
 		42A940FBCCD91101F62AFAEA /* Pods_CapitalMeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CapitalMeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		50E347D04D8FF0362C175528 /* Pods-CapitalMeUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CapitalMeUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CapitalMeUITests/Pods-CapitalMeUITests.release.xcconfig"; sourceTree = "<group>"; };
 		57ED191F1CF69D6DF346D573 /* Pods_CapitalMe.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CapitalMe.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -136,6 +140,7 @@
 				37A3DE4C1CF93D8500A58583 /* Info.plist */,
 				37A3DE7E1CF9417800A58583 /* CapitalInfo.swift */,
 				37A3DE7F1CF9417800A58583 /* CapitalRequestController.swift */,
+				37A3DE821CF98D6D00A58583 /* RestClient.swift */,
 			);
 			path = CapitalMe;
 			sourceTree = "<group>";
@@ -145,6 +150,7 @@
 			children = (
 				37A3DE551CF93D8500A58583 /* CapitalMeTests.swift */,
 				37A3DE571CF93D8500A58583 /* Info.plist */,
+				37A3DE841CF99DE200A58583 /* CapitalRequestControllerTest.swift */,
 			);
 			path = CapitalMeTests;
 			sourceTree = "<group>";
@@ -452,6 +458,7 @@
 				37A3DE811CF9417800A58583 /* CapitalRequestController.swift in Sources */,
 				37A3DE801CF9417800A58583 /* CapitalInfo.swift in Sources */,
 				37A3DE431CF93D8500A58583 /* ViewController.swift in Sources */,
+				37A3DE831CF98D6D00A58583 /* RestClient.swift in Sources */,
 				37A3DE411CF93D8500A58583 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -460,6 +467,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37A3DE851CF99DE200A58583 /* CapitalRequestControllerTest.swift in Sources */,
 				37A3DE561CF93D8500A58583 /* CapitalMeTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
