@@ -1,0 +1,38 @@
+[
+  {
+    "name": "Thailand",
+    "capital": "Bangkok",
+    "altSpellings": [
+                      "TH",
+                      "Prathet",
+                      "Thai",
+                      "Kingdom of Thailand",
+                      "ราชอาณาจักรไทย",
+                      "Ratcha Anachak Thai"
+                    ],
+    "relevance": "0",
+    "region": "Asia",
+    "subregion": "South-Eastern Asia",
+    "translations": {
+      "de": "Thailand",
+      "es": "Tailandia",
+      "fr": "Thaïlande",
+      "ja": "タイ",
+      "it": "Tailandia"
+    },
+    "population": 65104000,
+    "latlng": [15,100],
+    "demonym": "Thai",
+    "area": 513120,
+    "gini": 40,
+    "timezones": ["UTC+07:00"],
+    "borders": ["MMR", "KHM", "LAO", "MYS"],
+    "nativeName": "ประเทศไทย",
+    "callingCodes": ["66"],
+    "topLevelDomain": [".th"],
+    "alpha2Code": "TH",
+    "alpha3Code": "THA",
+    "currencies": ["THB"],
+    "languages": ["th"]
+  }
+]
